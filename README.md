@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
-## Project info
 
-**URL**: https://lovable.dev/projects/d16a9df6-c34a-47c8-9914-6ba83623be5f
+# emoji math madness 🎯
 
-## How can I edit this code?
 
-There are several ways of editing your application.
+## Basic Details
+### Team Name: AR
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d16a9df6-c34a-47c8-9914-6ba83623be5f) and start prompting.
+### Team Members
+- Team Lead: rafuwan - majlis arts and science college
+- Member 2: ansab - majlis arts and science college
 
-Changes made via Lovable will be committed automatically to this repo.
+### Project Description
+Emoji Math Madness is a fast-paced, emoji-powered math game.
+Solve equations by tapping emojis like 🍎 and ➕ instead of numbers and symbols.
+Beat the clock and embrace the chaos — no backend, just pure fun!
 
-**Use your preferred IDE**
+### The Problem (that doesn't exist)
+just provide some random math madness
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### The Solution (that nobody asked for)
+provide values for each emoji and solve math
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Technical Details
+### Technologies/Components Used
+For Software:
+- JAVASCRIPT
+- REACT
+- LOVABLE
 
-Follow these steps:
+### Implementation
+For Software:
+# Installation
+NPM INSTALL
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Run
+NPM RUN DEV
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Project Demo
+# link
+https://emoji-math-madness.lovable.app
+*Explain what the video demonstrates*
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Additional Demos
+[Add any extra demo materials/links]
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
+---
+Made with ❤️ at TinkerHub Useless Projects 
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d16a9df6-c34a-47c8-9914-6ba83623be5f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
