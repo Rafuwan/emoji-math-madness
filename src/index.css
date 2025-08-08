@@ -2,41 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Emoji Math Madness Design System - Bright, Playful, Kid-Friendly */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Game Background & UI */
+    --background: 220 15% 95%;
+    --foreground: 230 15% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 230 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Playful Color Palette */
+    --primary: 24 85% 60%;        /* Sunset Orange */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 85% 60%;     /* Ocean Blue */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 140 70% 55%;        /* Grass Green */
+    --accent-foreground: 0 0% 100%;
+    --success: 120 60% 50%;       /* Success Green */
+    --success-foreground: 0 0% 100%;
+    --warning: 45 100% 60%;       /* Sunny Yellow */
+    --warning-foreground: 230 15% 15%;
+    --error: 0 70% 60%;           /* Fun Red */
+    --error-foreground: 0 0% 100%;
+    --pink: 320 70% 65%;          /* Bubblegum Pink */
+    --pink-foreground: 0 0% 100%;
+    --purple: 270 60% 65%;        /* Magic Purple */
+    --purple-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Game UI Elements */
+    --muted: 220 15% 90%;
+    --muted-foreground: 230 10% 40%;
+    --border: 220 15% 85%;
+    --input: 220 15% 88%;
+    --ring: 24 85% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Game Gradients */
+    --gradient-rainbow: linear-gradient(135deg, 
+      hsl(var(--primary)), 
+      hsl(var(--pink)), 
+      hsl(var(--purple)), 
+      hsl(var(--secondary)));
+    --gradient-game-bg: linear-gradient(180deg, 
+      hsl(220 20% 98%), 
+      hsl(220 15% 95%));
+    --gradient-button: linear-gradient(145deg, 
+      hsl(var(--primary)), 
+      hsl(24 85% 50%));
+    --gradient-success: linear-gradient(145deg, 
+      hsl(var(--success)), 
+      hsl(140 70% 45%));
+    --gradient-error: linear-gradient(145deg, 
+      hsl(var(--error)), 
+      hsl(0 70% 50%));
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Game Shadows */
+    --shadow-game: 0 8px 25px -5px hsl(var(--primary) / 0.3);
+    --shadow-button: 0 4px 15px -3px hsl(var(--primary) / 0.4);
+    --shadow-float: 0 10px 30px -8px hsl(var(--primary) / 0.5);
+    --shadow-emoji: 0 2px 8px hsl(230 15% 15% / 0.15);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Spacing & Sizing */
+    --game-spacing: 1.5rem;
+    --button-size: 5rem;
+    --emoji-size: 3rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +131,80 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-game-bg);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Game Button Components */
+  .game-button {
+    @apply relative overflow-hidden rounded-2xl border-none cursor-pointer
+           transition-all duration-200 ease-out transform
+           hover:scale-105 active:scale-95
+           shadow-[var(--shadow-button)];
+    background: var(--gradient-button);
+    min-height: var(--button-size);
+    min-width: var(--button-size);
+  }
+
+  .emoji-button {
+    @apply game-button flex items-center justify-center
+           text-4xl font-bold text-white
+           hover:shadow-[var(--shadow-float)]
+           active:brightness-110;
+  }
+
+  .number-button {
+    @apply emoji-button;
+    background: var(--gradient-rainbow);
+  }
+
+  .operator-button {
+    @apply emoji-button;
+    background: var(--gradient-button);
+  }
+
+  .success-button {
+    @apply emoji-button;
+    background: var(--gradient-success);
+  }
+
+  .error-button {
+    @apply emoji-button;
+    background: var(--gradient-error);
+  }
+
+  /* Game Animations */
+  .bounce-in {
+    animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .celebration {
+    animation: celebration 0.6s ease-out;
+  }
+
+  /* Timer States */
+  .timer-calm {
+    @apply text-green-500;
+    animation: gentle-pulse 2s ease-in-out infinite;
+  }
+
+  .timer-warning {
+    @apply text-yellow-500;
+    animation: warning-pulse 1s ease-in-out infinite;
+  }
+
+  .timer-danger {
+    @apply text-red-500;
+    animation: danger-shake 0.3s ease-in-out infinite;
   }
 }
