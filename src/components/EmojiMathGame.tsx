@@ -329,12 +329,21 @@ const EmojiMathGame = () => {
             <div className="text-2xl font-bold text-primary">
               Final Score: {gameState.score} points
             </div>
-            <Button 
-              onClick={startGame}
-              className="game-button text-2xl px-8 py-4"
-            >
-              🔄 Play Again!
-            </Button>
+            <div className="flex justify-center gap-4">
+              <Button 
+                onClick={startGame}
+                className="game-button text-2xl px-8 py-4"
+              >
+                🔄 Play Again!
+              </Button>
+              <Button
+                onClick={() => window.location.reload()}
+                variant="outline"
+                className="px-6 py-3 text-lg font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                🌟 Reload Game
+              </Button>
+            </div>
           </div>
         )}
       </Card>
